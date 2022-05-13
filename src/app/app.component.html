@@ -1,0 +1,29 @@
+<header>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <h1>{{title}}</h1>
+  </nav>
+</header>
+<br>
+<body>
+  <form>
+    <ul>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <div *ngFor="let element of persona">
+              <div class="input-group mb-3" *ngFor="let element2 of element; let i = index">
+                <label class="input-group-text" for="">
+                  {{element2.label_campo}}
+                </label>
+                <input type="text" class="form-control" id="name" name="name-{{i}}" [ngModel]="element2.valor_campo">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <img class="center" src="assets/img/logogdl.png" width="60%" height="60%" >
+          </div>
+        </div>
+      </div>
+    </ul>
+  </form>
+</body>S
